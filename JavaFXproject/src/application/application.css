@@ -1,0 +1,7 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.list-view .list-cell:even {
+-fx-font-size: 24px;
+}
+.list-view .list-cell:odd {
+-fx-font-size: 24px;
+}
