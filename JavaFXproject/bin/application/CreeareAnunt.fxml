@@ -6,51 +6,52 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CreeareAnuntController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="394.0" prefWidth="431.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CreeareAnuntController">
    <children>
-      <TextField fx:id="numeField" layoutX="136.0" layoutY="17.0">
+      <TextField fx:id="numeField" layoutX="217.0" layoutY="146.0" prefHeight="30.0" prefWidth="250.0" AnchorPane.rightAnchor="14.0">
          <font>
             <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="descField" layoutX="134.0" layoutY="60.0" prefHeight="74.0" prefWidth="186.0">
+         </font></TextField>
+      <TextField fx:id="descField" layoutX="217.0" layoutY="185.0" prefHeight="30.0" prefWidth="250.0" AnchorPane.rightAnchor="14.0">
          <font>
             <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="kmField" layoutX="134.0" layoutY="148.0">
+         </font></TextField>
+      <TextField fx:id="kmField" layoutX="217.0" layoutY="226.0" prefHeight="30.0" prefWidth="250.0" AnchorPane.rightAnchor="14.0">
          <font>
             <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="pretField" layoutX="134.0" layoutY="186.0">
+         </font></TextField>
+      <TextField fx:id="pretField" layoutX="217.0" layoutY="265.0" prefHeight="30.0" prefWidth="250.0" AnchorPane.rightAnchor="14.0">
          <font>
             <Font size="14.0" />
-         </font>
-      </TextField>
-      <Button fx:id="okButton" layoutX="353.0" layoutY="14.0" mnemonicParsing="false" onAction="#okButtonClick" text="OK">
+         </font></TextField>
+      <Button fx:id="okButton" layoutX="218.0" layoutY="435.0" mnemonicParsing="false" onAction="#okButtonClick" text="CONFIRM" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
          <font>
-            <Font size="28.0" />
+            <Font size="24.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="146.0" prefHeight="30.0" prefWidth="120.0" text="Nume:" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="183.0" prefHeight="30.0" prefWidth="120.0" text="Descriere:" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="224.0" prefHeight="30.0" prefWidth="120.0" text="Kilometraj:" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="263.0" prefHeight="30.0" prefWidth="120.0" text="Pret:" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button layoutX="289.0" layoutY="262.0" mnemonicParsing="false" onAction="#cancelButtonClick" text="CANCEL" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="24.0" />
          </font>
       </Button>
-      <Label layoutX="14.0" layoutY="14.0" text="Nume:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <Label alignment="CENTER" layoutX="188.0" layoutY="76.0" text="Creeare anunt nou!" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
          <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="14.0" layoutY="51.0" text="Desc:">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="14.0" layoutY="145.0" text="Kilometraj:">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="18.0" layoutY="183.0" text="Pret:">
-         <font>
-            <Font size="24.0" />
+            <Font size="36.0" />
          </font>
       </Label>
    </children>

@@ -6,6 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,6 +24,9 @@ public class ListController implements Initializable {
 	private Button butonProfil;
 	@FXML
 	private Button butonStergere;
+	@FXML
+	private Label labelTitlu;
+	
 	public static Anunt anuntSelectat;
 	
 	// Event Listener on Button[#butonVizualizare].onAction
@@ -40,6 +44,7 @@ public class ListController implements Initializable {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setTitle("Car Market");
 			stage.setScene(scene);
+			stage.centerOnScreen();
 			stage.show();
 		}
 	}
@@ -49,9 +54,11 @@ public class ListController implements Initializable {
 		Parent root = FXMLLoader.load(getClass().getResource("CreeareAnunt.fxml"));
 		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		Scene scene = new Scene(root);
+		Main.currentScene = scene;
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		stage.setTitle("Car Market");
 		stage.setScene(scene);
+		stage.centerOnScreen();
 		stage.show();
 	}
 	@FXML
@@ -62,10 +69,12 @@ public class ListController implements Initializable {
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		stage.setTitle("Car Market");
 		stage.setScene(scene);
+		stage.centerOnScreen();
 		stage.show();
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		labelTitlu.setText("Bun venit la CarMarket, "+Main.currentUser.user+"!");
 		butonProfil.setDisable(true);
 		butonStergere.setDisable(true);
 		if (Main.currentUser instanceof UtilizatorVerificat) {

@@ -11,45 +11,48 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 
-public class CreeareAnuntController {
+public class RegisterController {
 	@FXML
-	private TextField numeField;
+	private TextField emailField;
 	@FXML
-	private TextField descField;
+	private TextField userField;
 	@FXML
-	private TextField kmField;
+	private TextField passField;
 	@FXML
-	private TextField pretField;
+	private TextField confirmField;
 	@FXML
-	private Button okButton;
+	private TextField phoneField;
 	@FXML
 	private Button cancelButton;
-	public static String nume;
-	public static String desc;
-	public static int km;
-	public static int pret;
-	//creeate button
 	@FXML
-	public void okButtonClick(ActionEvent event) throws IOException{
-		nume=numeField.getText();
-		desc=descField.getText();
-		km=Integer.parseInt(kmField.getText());
-		pret=Integer.parseInt(pretField.getText());
-		Main.anunturi.add(new Anunt(Main.currentUser.id, nume, desc, km, pret,
-		Main.currentUser.telefon, Main.currentUser.email));
-		Parent root = FXMLLoader.load(getClass().getResource("List.fxml"));
+	private Button confirmButton;
+	public static String email;
+	public static String user;
+	public static String pass;
+	public static String confirm;
+	public static String phone;
+	//cancel button
+	@FXML
+	public void cancelButtonClick(ActionEvent event) throws IOException {
+		Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		Scene scene = new Scene(root);
+		Main.currentScene = scene;
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		stage.setTitle("Car Market");
 		stage.setScene(scene);
 		stage.centerOnScreen();
 		stage.show();
 	}
-	//cancel button
+	//register button
 	@FXML
-	public void cancelButtonClick(ActionEvent event) throws IOException{
-		Parent root = FXMLLoader.load(getClass().getResource("List.fxml"));
+	public void confirmButtonClick(ActionEvent event) throws IOException {
+		email=emailField.getText();
+		user=userField.getText();
+		pass=passField.getText();
+		confirm=confirmField.getText();
+		phone=phoneField.getText();
+		Parent root = FXMLLoader.load(getClass().getResource("ConfirmEmail.fxml"));
 		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 		Scene scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());

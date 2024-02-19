@@ -7,6 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,6 +23,8 @@ public class StergereAnuntController implements Initializable {
 	private Button butonSterge;
 	@FXML
 	private Button butonInapoi;
+	@FXML
+	private Label labelTitlu;
 	public static Anunt anuntSelectat;
 
 	// Event Listener on Button[#butonSterge].onAction
@@ -39,6 +43,7 @@ public class StergereAnuntController implements Initializable {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setTitle("Car Market");
 			stage.setScene(scene);
+			stage.centerOnScreen();
 			stage.show();
 		}
 	}
@@ -51,13 +56,23 @@ public class StergereAnuntController implements Initializable {
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		stage.setTitle("Car Market");
 		stage.setScene(scene);
+		stage.centerOnScreen();
 		stage.show();
 	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		for (Anunt anunt : Main.anunturi) {
-			if (anunt.id.equals(Main.currentUser.id)) {
+		if (Main.currentUser.id.equals("-1"))
+		{
+			labelTitlu.setText("Toate anunturile");
+			for (Anunt anunt : Main.anunturi) {
 				listaAnunturi.getItems().add(anunt.nume+", Pret: "+anunt.pret);
+			}
+		}
+		else {
+			for (Anunt anunt : Main.anunturi) {
+				if (anunt.id.equals(Main.currentUser.id)) {
+					listaAnunturi.getItems().add(anunt.nume+", Pret: "+anunt.pret);
+				}
 			}
 		}
 	}

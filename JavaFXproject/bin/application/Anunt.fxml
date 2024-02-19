@@ -5,17 +5,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AnuntController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AnuntController">
    <children>
-      <Label fx:id="textLabel" alignment="TOP_LEFT" layoutX="22.0" layoutY="14.0" prefHeight="308.0" prefWidth="572.0" text="placeholder" wrapText="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <Label fx:id="textLabel" alignment="TOP_LEFT" layoutX="22.0" layoutY="14.0" text="placeholder" wrapText="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
          <font>
             <Font size="24.0" />
-         </font>
-      </Label>
-      <Button fx:id="okButton" alignment="CENTER" layoutX="257.0" layoutY="339.0" mnemonicParsing="false" onAction="#okButtonClick" text="OK" AnchorPane.bottomAnchor="14.0">
+         </font></Label>
+      <Button fx:id="okButton" alignment="CENTER" layoutX="145.0" layoutY="335.0" mnemonicParsing="false" onAction="#okButtonClick" text="INAPOI" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
          <font>
             <Font size="24.0" />
-         </font>
-      </Button>
+         </font></Button>
    </children>
 </AnchorPane>

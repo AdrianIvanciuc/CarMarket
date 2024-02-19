@@ -8,21 +8,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StergereAnuntController">
    <children>
-      <ListView fx:id="listaAnunturi" layoutX="14.0" layoutY="14.0" prefHeight="515.0" prefWidth="500.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
-      <Label layoutX="113.0" layoutY="31.0" text="Anunturile tale:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <ListView fx:id="listaAnunturi" layoutX="14.0" layoutY="14.0" prefHeight="497.0" prefWidth="500.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <Label fx:id="labelTitlu" alignment="CENTER" layoutX="113.0" layoutY="31.0" text="Anunturile tale" textAlignment="JUSTIFY" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
          <font>
-            <Font size="32.0" />
-         </font>
-      </Label>
-      <Button fx:id="butonSterge" layoutX="585.0" layoutY="71.0" mnemonicParsing="false" onAction="#butonStergeClick" text="Sterge">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Button>
-      <Button fx:id="butonInapoi" layoutX="586.0" layoutY="132.0" mnemonicParsing="false" onAction="#butonInapoiClick" text="Inapoi">
+            <Font size="36.0" />
+         </font></Label>
+      <Button fx:id="butonSterge" layoutX="566.0" layoutY="89.0" mnemonicParsing="false" onAction="#butonStergeClick" text="STERGE" AnchorPane.rightAnchor="21.0">
          <font>
             <Font size="24.0" />
-         </font>
-      </Button>
+         </font></Button>
+      <Button fx:id="butonInapoi" layoutX="568.0" layoutY="158.0" mnemonicParsing="false" onAction="#butonInapoiClick" text="INAPOI" AnchorPane.rightAnchor="22.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
    </children>
 </AnchorPane>

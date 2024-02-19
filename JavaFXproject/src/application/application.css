@@ -1,7 +1,19 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 .list-view .list-cell:even {
--fx-font-size: 24px;
+	-fx-font-size: 24px;
 }
 .list-view .list-cell:odd {
--fx-font-size: 24px;
+	-fx-font-size: 24px;
+}
+.root{
+	-fx-font-family : "Times new Roman"; 
+    -fx-base: rgb(159, 193, 211);
+    -fx-background: rgb(63, 100, 126);
+}
+.button{
+	-fx-background-radius: 36px;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.label{
+	-fx-background-color: rgb(0, 176, 178);
+	-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
 }

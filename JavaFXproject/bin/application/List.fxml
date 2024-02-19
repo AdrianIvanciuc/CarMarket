@@ -6,28 +6,29 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ListController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ListController">
    <children>
-      <ListView fx:id="listaAnunturi" layoutX="14.0" layoutY="70.0" prefHeight="515.0" prefWidth="500.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="70.0" />
-      <Button fx:id="butonVizualizare" layoutX="528.0" layoutY="14.0" mnemonicParsing="false" onAction="#butonAnuntClick" prefHeight="88.0" prefWidth="161.0" text="Vizualizeaza Anunt" wrapText="true">
+      <ListView fx:id="listaAnunturi" layoutX="20.0" layoutY="81.0" prefHeight="499.0" prefWidth="692.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <Button fx:id="butonVizualizare" layoutX="725.0" layoutY="187.0" mnemonicParsing="false" onAction="#butonAnuntClick" prefHeight="88.0" prefWidth="161.0" text="Vizualizeaza Anunt" wrapText="true" AnchorPane.rightAnchor="14.0">
          <font>
             <Font size="24.0" />
-         </font>
-      </Button>
-      <Button fx:id="butonProfil" layoutX="528.0" layoutY="113.0" mnemonicParsing="false" onAction="#butonProfilClick" prefHeight="88.0" prefWidth="161.0" text="Adauga anunt" wrapText="true">
+         </font></Button>
+      <Button fx:id="butonProfil" layoutX="725.0" layoutY="285.0" mnemonicParsing="false" onAction="#butonProfilClick" prefHeight="88.0" prefWidth="161.0" text="Adauga anunt" wrapText="true" AnchorPane.rightAnchor="14.0">
          <font>
             <Font size="24.0" />
-         </font>
-      </Button>
-      <Label layoutX="14.0" layoutY="14.0" prefHeight="20.0" prefWidth="245.0" text="Anunturi curente:">
+         </font></Button>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="122.0" prefHeight="53.0" prefWidth="692.0" text="Anunturi curente:" textAlignment="JUSTIFY" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="194.0" AnchorPane.topAnchor="122.0">
          <font>
-            <Font size="32.0" />
+            <Font size="36.0" />
+         </font></Label>
+      <Button fx:id="butonStergere" layoutX="725.0" layoutY="384.0" mnemonicParsing="false" onAction="#butonStergereClick" prefHeight="88.0" prefWidth="161.0" text="Anunturile mele" wrapText="true" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Label fx:id="labelTitlu" alignment="CENTER" layoutX="375.0" layoutY="62.0" text="PLACEHOLDER" textAlignment="JUSTIFY" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font size="48.0" />
          </font>
       </Label>
-      <Button fx:id="butonStergere" layoutX="528.0" layoutY="214.0" mnemonicParsing="false" onAction="#butonStergereClick" prefHeight="88.0" prefWidth="161.0" text="Sterge anunt" wrapText="true">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

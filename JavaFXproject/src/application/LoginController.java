@@ -18,10 +18,11 @@ public class LoginController {
 	private TextField passField;
 	@FXML
 	private Button okButton;
+	@FXML
+	private Button registerButton;
 	public static String user;
 	public static String pass;
-	
-	// Event Listener on Button[#okButton].onAction
+	//go to panel
 	@FXML
 	public void okButtonClick(ActionEvent event) throws IOException {
 		user = userField.getText();
@@ -35,10 +36,36 @@ public class LoginController {
 			Parent root = FXMLLoader.load(getClass().getResource("List.fxml"));
 			Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			Scene scene = new Scene(root);
+			Main.currentScene = scene;
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setTitle("Car Market");
 			stage.setScene(scene);
+			stage.centerOnScreen();
 			stage.show();
 		}
+		else {
+			Main.errorTxt = "User sau parola incorecta!";
+			Parent root = FXMLLoader.load(getClass().getResource("Error.fxml"));
+			Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+			Scene scene = new Scene(root);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			stage.setTitle("Car Market");
+			stage.setScene(scene);
+			stage.centerOnScreen();
+			stage.show();
+		}
+	}
+	//go to register screen
+	@FXML
+	public void registerButtonClick(ActionEvent event) throws IOException {
+		Parent root = FXMLLoader.load(getClass().getResource("Register.fxml"));
+		Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		Scene scene = new Scene(root);
+		Main.currentScene = scene;
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		stage.setTitle("Car Market");
+		stage.setScene(scene);
+		stage.centerOnScreen();
+		stage.show();
 	}
 }
